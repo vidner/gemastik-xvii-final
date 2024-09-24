@@ -1,5 +1,5 @@
 # gemastik-xvii-final
-this repository provides the docker environments for the gemastik-xvii final services.
+this repository provides the docker environments for gemastik-xvii attack-defense final services.
 
 ## warmup-challenges
 | challenges | author | category | writeup |
