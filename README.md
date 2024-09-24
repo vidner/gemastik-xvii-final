@@ -19,7 +19,7 @@ this repository provides the docker environments for gemastik-xvii attack-defens
 | gift-voucher | deomkicer | crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 | gleam-drive | vidner | web-crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 | kode-viewer | vidner | web | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
-| tempest-poc | dummklloun | web | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
+| tempest-poc | dummklloun | web | [daffainfo](https://github.com/daffainfo/ctf-writeup/tree/main/2024/Final%20Gemastik%202024/tempest-poc) |
 | ticketer | merricx | crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 
 ## how-to-contribute
