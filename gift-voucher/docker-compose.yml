@@ -1,0 +1,13 @@
+services:
+  gift-voucher:
+    hostname: gift-voucher
+    restart: always
+    build:
+      context: .
+      args:
+        - PASSWORD=PASSWORD_16000
+    ports:
+      - "16000:5000"
+      - "16022:22"
+    volumes:
+      - ./flag.txt:/ctf/gift-voucher/flag.txt:ro

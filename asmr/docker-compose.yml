@@ -1,0 +1,11 @@
+services:
+  asmr:
+    hostname: asmr
+    restart: always
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - "15000:8000"
+      - "15022:22"

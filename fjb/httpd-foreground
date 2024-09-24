@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+# start sshd
+/usr/sbin/sshd -D &
+
+# Apache gets grumpy about PID files pre-existing
+rm -f /usr/local/apache2/logs/httpd.pid
+
+exec httpd -DFOREGROUND "$@"

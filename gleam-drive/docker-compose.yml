@@ -1,0 +1,9 @@
+services:
+  gleam-drive:
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - "12000:8000"
+      - "12022:22"

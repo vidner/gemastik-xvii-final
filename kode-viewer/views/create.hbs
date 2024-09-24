@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>kode-viewer</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <div class="flex flex-col h-full w-full">
+    {{> navbar}}
+    <main class="flex justify-center items-center h-full w-full my-5">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm w-3/4 h-3/4" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">Create New Kode</h3>
+                <p class="text-sm text-muted-foreground">Add a new kode snippet to your collection.</p>
+            </div>
+            <form action="/kode" method="POST">
+              <div class="p-6 space-y-4">
+                  <div class="grid grid-cols-1 gap-4">
+                  <div class="space-y-2">
+                      <textarea
+                      class="flex min-h-[500px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      id="kode"
+                      name="kode"
+                      rows="6"
+                      placeholder="Enter your code here..."
+                      ></textarea>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                      <div class="space-y-2">
+                      <select id="lang" name="lang" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                          <option selected value="python">Python</option>
+                          <option value="rust">Rust</option>
+                          <option value="typescript">TypeScript</option>
+                          <option value="go">Golang</option>
+                          <option value="haskell">Haskell</option>
+                          <option value="c">C</option>
+                          <option value="cpp">C++</option>
+                          <option value="markdown">Markdown</option>
+                          <option value="java">Java</option>
+                          <option value="ruby">Ruby</option>
+                      </select>
+
+                      </div>
+                      <div class="space-y-2">
+                      <input
+                          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                          id="name"
+                          name="name"
+                          placeholder="Enter a name for your kode"
+                      />
+                      </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                      <label class="inline-flex items-center cursor-pointer">
+                          <input type="checkbox" class="sr-only peer" id="kind" name="kind">
+                          <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                          <span class="ms-3 text-sm font-medium">Private</span>
+                        </label>
+                        
+                        <div>
+                          <button type="submit" class="rounded-md text-sm w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                            Create Kode
+                        </button>
+                        </div>
+                  </div>
+                  </div>
+              </div>
+            </form>
+        </div>
+    </main>
+  </div>
+</html>

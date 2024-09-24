@@ -1,0 +1,11 @@
+services:
+  ticketer:
+    hostname: ticketer
+    restart: always
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - "14000:5000"
+      - "14022:22"

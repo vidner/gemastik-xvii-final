@@ -1,0 +1,13 @@
+services:
+  gift-card:
+    hostname: gift-card
+    restart: always
+    build:
+      context: .
+      args:
+        - PASSWORD=PASSWORD_21000
+    ports:
+      - "21000:5000"
+      - "21022:22"
+    volumes:
+      - ./flag.txt:/ctf/gift-card/flag.txt:ro

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>kode-viewer</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <div class="flex flex-col min-h-screen">
+        {{> header}}
+        <main class="flex-1 flex flex-col items-center justify-center text-center">
+          <div class="w-full max-w-md space-y-8">
+            <div>
+              <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-foreground">Register to Kode Viewer</h2>
+            </div>
+            <form class="space-y-4" action="/auth/register" method="POST">
+              <div>
+                <label
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 sr-only"
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  class="h-10 bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 relative block w-full appearance-none rounded-md border border-muted px-3 py-2 text-foreground placeholder-muted-foreground focus:z-10 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+                  type="email"
+                  id="email"
+                  autocomplete="email"
+                  required
+                  placeholder="Email"
+                  name="email"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 sr-only"
+                  for="password"
+                >
+                  Password
+                </label>
+                <input
+                  class="h-10 bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 relative block w-full appearance-none rounded-md border border-muted px-3 py-2 text-foreground placeholder-muted-foreground focus:z-10 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm"
+                  type="password"
+                  id="password"
+                  autocomplete="current-password"
+                  required
+                  placeholder="Password"
+                  name="password"
+                />
+              </div>
+              <div>
+                <button type="submit" class="rounded-md text-sm w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                  Register
+              </button>
+              </div>
+              <div class="text-center">
+                <a class="text-sm font-medium text-muted-foreground text-gray-500 hover:text-gray-900" href="/auth/login">
+                  Already have an account? Sign in
+                </a>
+              </div>
+            </form>
+          </div>
+        </main>
+    </div>
+</html>

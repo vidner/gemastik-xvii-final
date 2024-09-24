@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List of Top CWE - Common Weakness Enumeration</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.min.css') }}" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="atas">
+      <form action="javascript:search()" id="search">
+        <label for="code">CWE ID<input type="number" name="CWE ID" id="cwe-id" min="0" autofocus /></label>
+        <label for="title">Title<input type="text" name="Title" id="title" maxlength="255" /></label>
+        <label for="description">Description<input type="text" name="Description" id="description"
+            maxlength="255" /></label>
+        <button type="submit">Search</button>
+      </form>
+      <div style="margin: auto; text-align: center;">
+        <p>
+          Welcome to <span style="font-weight: bold">List of Top CWE</span>,
+          {{ session["user"] }}!
+        </p>
+        <p>
+          Click here to access admin <strong id="access-flag">flag</strong> or
+          <strong id="logout">logout</strong>.
+        </p>
+      </div>
+      <form id="pagination">
+        <button type="submit" id="prev-page">Prev</button>
+        <p id="page"></p>
+        <button type="submit" id="next-page">Next</button>
+      </form>
+    </div>
+    <div class="bawah">
+      <table class="sortable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th class="sortable-column" onclick="javascript:sort(0)">
+              CWE ID
+            </th>
+            <th class="sortable-column" onclick="javascript:sort(1)">
+              Title
+            </th>
+            <th class="sortable-column" onclick="javascript:sort(2)">
+              Description
+            </th>
+          </tr>
+        </thead>
+        <tbody id="fillable-body"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+<script src="{{ url_for('static', filename='dashboard.min.js') }}"></script>
+
+</html>

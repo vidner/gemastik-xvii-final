@@ -1,0 +1,8 @@
+services:
+  more-less:
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - "22000:8000"

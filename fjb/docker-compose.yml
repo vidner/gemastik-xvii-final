@@ -1,0 +1,9 @@
+services:
+  fjb:
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - 17000:80
+      - 17022:22

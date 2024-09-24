@@ -1,0 +1,1 @@
+su ctf -c "timeout 60s python3 -u /ctf/asmr.py"

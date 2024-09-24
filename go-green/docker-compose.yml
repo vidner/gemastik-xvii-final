@@ -1,0 +1,11 @@
+services:
+  go-green:
+    hostname: go-green
+    restart: always
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - "20000:8000"
+      - "20022:22"

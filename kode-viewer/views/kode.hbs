@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>kode-viewer</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/xcode.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/{{ kode.lang }}.min.js"></script>
+      <script>hljs.highlightAll();</script>
+  </head>
+  <div class="flex flex-col h-full w-full">
+      <div class="bg-background border-b flex px-4 sm:px-6 h-14">
+        <div class="flex flex-row justify-between items-center w-full">
+          <a class="flex items-center" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          <span class="sr-only">kode-viewer</span>
+          </a>
+          <div class="flex">
+            <div>
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                  >
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                  <polyline points="16 17 21 12 16 7" />
+                  <line x1="21" x2="9" y1="12" y2="12" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    <main class="flex justify-center items-center h-full w-full my-5">
+        <div class="rounded-lg border bg-card text-card-foreground shadow-sm w-3/4 h-3/4" data-v0-t="card">
+            <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">{{ kode.name }}</h3>
+                <p class="text-sm text-muted-foreground">by {{ kode.email }}</p>
+            </div>
+            <pre><code class="language-{{ kode.lang }}">{{ kode.kode }}</code></pre>
+        </div>
+    </main>
+  </div>
+</html>

@@ -1,0 +1,17 @@
+services:
+  kode-viewer:
+    build:
+      context: .
+      args:
+        - PASSWORD=root
+    ports:
+      - '10000:3000'
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+  redis:
+    image: public.ecr.aws/docker/library/redis:alpine
+    volumes:
+      - ./redis-data:/data

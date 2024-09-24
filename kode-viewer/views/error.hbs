@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>kode-viewer</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <div class="flex flex-col min-h-screen">
+        {{> header}}
+        <main class="flex-1 flex flex-col items-center justify-center text-center">
+          <div class="w-full max-w-md space-y-8">
+            <div>
+              <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-foreground">Oops</h2>
+            </div>
+            <div>
+              <p class="text-center text-foreground">{{ message }}</p>
+            </div>
+            <div>
+              <a href="/kode" class="rounded-md text-sm w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                Go back
+              </a>
+            </div>
+          </div>
+        </main>
+    </div>
+</html>

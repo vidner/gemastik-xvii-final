@@ -1,0 +1,28 @@
+services:
+  anti-alchemy:
+    hostname: anti-alchemy
+    restart: always
+    build:
+      args:
+        - PASSWORD=PASSWORD_11000
+    volumes:
+      - ./flag.txt:/flag.txt:ro
+    ports:
+      - "11000:5000"
+      - "11022:22"
+    depends_on:
+      - anti-alchemy-db
+    environment:
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASS=password
+      - DB_HOST=anti-alchemy-db
+      - DB_PORT=5432
+      - SECRET_KEY=PASSWORD_11000
+  anti-alchemy-db:
+    image: public.ecr.aws/docker/library/postgres:16.3-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./db/dump.sql:/docker-entrypoint-initdb.d/init.sql
