@@ -13,12 +13,12 @@ this repository provides the docker environments for gemastik-xvii attack-defens
 ## final-challenges
 | challenges | author | category | writeup |
 | ---------- | ------ | -------- |---------|
-| anti-alchemy | deomkicer | web | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
+| anti-alchemy | deomkicer | web | [beluga](https://github.com/lordrukie/my-ctf-writeup/tree/main/2024/national/gemastik-xvii/anti-alchemy) |
 | asmr | circleous | pwn | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 | fjb | circleous | web-pwn | [yqroo](https://hackmd.io/@yqroo/H1ulEhGA0) |
 | gift-voucher | deomkicer | crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 | gleam-drive | vidner | web-crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
-| kode-viewer | vidner | web | [DJumanto](https://github.com/DJumanto/gemastik-xvii-kode-viewer-poc) |
+| kode-viewer | vidner | web | [DJumanto](https://github.com/DJumanto/gemastik-xvii-kode-viewer-poc), [beluga](https://github.com/lordrukie/my-ctf-writeup/tree/main/2024/national/gemastik-xvii/kode-viewer) |
 | tempest-poc | dummklloun | web | [daffainfo](https://github.com/daffainfo/ctf-writeup/tree/main/2024/Final%20Gemastik%202024/tempest-poc) |
 | ticketer | merricx | crypto | [contribute](https://github.com/vidner/gemastik-xvii-final/pulls) |
 
