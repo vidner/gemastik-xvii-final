@@ -28,7 +28,7 @@ contribute by sharing a link to your write-up. since services may have multiple 
 ### pull-request
 ```diff
 - [contribute](https://github.com/vidner/gemastik-xvii-final/pulls)
-+ [by yourname](https://link-to-writeup)
++ [by yourname](https://link-to-writeup), [by othername](https://link-to-other-writeup)
 ```
 
 ### discord
